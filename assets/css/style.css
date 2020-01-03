@@ -1,0 +1,120 @@
+body{
+    margin: 0;
+    font-size: 23px;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    font-weight: 700;
+}
+p{
+    margin: 0 0 20px;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+input{
+    font-size: 20px;
+}
+
+/*BUTTONS   */
+.btn{
+    display: inline-block;
+    padding: 6px 10px;
+    background-color: #8BFFD8;
+    border-radius: 10px;
+    opacity: 0.6;
+    transition: opacity 0.15s linear;
+}
+
+.btn--add{
+    background-color: #E7BBFF;
+    margin-top: 25px;
+    opacity: 75%;
+}
+
+.btn--update{
+    background-color: lightskyblue;
+    margin-bottom: 2px;
+}
+
+.btn:hover{
+    opacity: 1;
+}
+
+
+
+/*BLOG=====================================*/
+
+article{
+    margin: 40px;
+    font-size: 23px;
+}
+
+.article-first{
+    margin-top: 15px;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.title-m{
+    margin-top: 250px;
+}
+.main-title{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.date{
+    margin: 0 0 10px 35px;
+}
+
+.update{
+    color: gray;
+    opacity: 0.6;
+    font-size: 16px;
+}
+
+.date span{
+    font-family: 'Neucha', cursive;
+    letter-spacing: 1px;
+}
+/*IMAGES*/
+.img{
+    max-width: 800px;
+    max-height: 700px;
+    margin-bottom: 15px;
+}
+
+.img-item{
+    max-width: inherit;
+    max-height: inherit;
+}
+
+.author{
+    opacity: 0.8;
+}
+
+.author span{
+    font-family: 'Neucha', cursive;
+    letter-spacing: 1px;
+}
+
+.you{
+    color: #5858ED;
+}
+
+
