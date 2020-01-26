@@ -39,7 +39,7 @@ input{
 
 .btn--add{
     background-color: #E7BBFF;
-    margin-top: 25px;
+    /*margin-top: 25px;*/
     opacity: 75%;
 }
 
@@ -55,6 +55,13 @@ input{
 
 
 /*BLOG=====================================*/
+
+.search-container{
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 article{
     margin: 40px;

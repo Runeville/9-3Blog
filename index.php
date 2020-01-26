@@ -36,11 +36,23 @@ $select_res = mysqli_query($connect, $select);
 <body>
 <?php ob_link('header'); ?>
 <div class="container">
-    <?php if(PROFILE_INFO['status'] > 0): ?>
-    <a class="btn btn--add" href="add_post.php">Добавить запись</a>
-    <?php endif; ?>
+    <div class="search-container">
+        <?php if(PROFILE_INFO['status'] > 0): ?>
+        <a class="btn btn--add" href="add_post.php">Добавить запись</a>
+        <?php endif; ?>
+        <form action="" method="get">
+            <label>
+                <input type="search" name="search">
+            </label>
+            <button type="submit">Найти</button>
+        </form>
+    </div>
+
     <?php while($post = mysqli_fetch_array($select_res, MYSQLI_ASSOC)): ?>
         <?php
+            $search = $_GET['search'];
+            if (preg_match("/$search/i", $post['title'])):
+                $post['title'] = preg_replace("/$search/i", "<span style='background: skyblue;'>$search</span>", $post['title']);
             //GET AUTHOR
             $select_login = mysqli_query($connect,"SELECT * FROM users WHERE login='{$post['author']}'");
             $login_res = mysqli_fetch_array($select_login, MYSQLI_ASSOC);
@@ -80,6 +92,7 @@ $select_res = mysqli_query($connect, $select);
 
             <hr>
         </article>
+    <?php endif; ?>
     <?php endwhile; mysqli_close($connect); ?>
 </div>
 
